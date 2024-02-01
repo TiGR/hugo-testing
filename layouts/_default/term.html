@@ -1,0 +1,20 @@
+{{ define "main" }}
+    {{ partial "news_list_header" . }}
+
+    {{ partial "blocks/news_filters.html" . }}
+
+    <div class="row">
+        <section class="col">
+            {{- .Content -}}
+            <div class="news-list news-list--list">
+                {{$pages := partial "pages_in_section_deep" .}}
+                {{range $index,$page := where (.Paginate $pages).Pages ".Params.hidden" "ne" true}}
+                    {{$page.Render "list_item"}}
+                {{end}}
+                <div class="pagination__wrap">
+                    {{- template "_internal/pagination.html" . -}}
+                </div>
+            </div>
+        </section>
+    </div>
+{{ end }}
