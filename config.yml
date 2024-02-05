@@ -5,3 +5,5 @@ languages:
     languageName: English
   es:
     languageName: Español
+  fr:
+    languageName: Français
