@@ -1,2 +1,3 @@
-{{.Title}}
-{{.Content}}
+{{ with .Resources.GetMatch "doc.*" }}
+    {{ .Content|safeHTML }}
+{{ end }}

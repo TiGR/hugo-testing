@@ -1,9 +1,1 @@
 baseURL: https://example.com/
-languageCode: en
-languages:
-  en:
-    languageName: English
-  es:
-    languageName: Español
-  fr:
-    languageName: Français
