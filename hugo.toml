@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-US'
+disableKinds = ['rss','sitemap']
+
+[taxonomies]
+tag = "tags"

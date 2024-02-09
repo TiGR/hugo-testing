@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ warnf "Listing tags:" }}
+  {{ warnf (strings.Repeat 20 "-") }}
+  {{ range site.Taxonomies.tags }}
+    {{ warnf "Tag %#v %#v" .Page.Slug .Page.Title }}
+  {{ end }}
+
+  {{ warnf " " }}
+
+  {{ warnf "Listing tags in alphabetical order:" }}
+  {{ warnf (strings.Repeat 35 "-") }}
+  {{ range sort site.Taxonomies.tags ".Page.Title" }}
+    {{ warnf "Tag %#v" .Page.Title }}
+  {{ end }}
+{{ end }}
