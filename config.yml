@@ -1,4 +1,7 @@
 baseURL: https://example.com/
+disableKinds:
+  - taxonomy
+  - term
 languageCode: en
 languages:
   en:
