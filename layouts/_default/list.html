@@ -4,9 +4,9 @@
     {{ range .Pages }}
         {{$subpage := .}}
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-        {{ warnf "%s file tags (on page %s):" .Title $.Title}}
+        {{ warnf "%s file tags:" .Title }}
         {{ range .GetTerms "tags" }}
-            {{ warnf "-- %s (%s, %s)" .Title $subpage.Title $.Title }}
+            {{ warnf "-- %s (%s)" .Title $subpage.Title }}
         {{ end }}
     {{ end }}
 {{ end }}
